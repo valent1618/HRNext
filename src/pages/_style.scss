@@ -1,0 +1,85 @@
+#Create {
+  align-items: center;
+
+  h2 {
+    overflow: visible;
+    z-index: 5;
+    margin: 20px 0 -1.4em 0;
+    max-width: 80%;
+    border-radius: 50px;
+    box-shadow: $shadow;
+    padding: 15px 50px;
+    text-align: center;
+  }
+
+  form {
+    min-width: 50vw;
+    max-width: 700px;
+    padding: 75px 50px 30px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px;
+
+    .flex-input {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 50px;
+    }
+
+    .input-container {
+      flex-grow: 1;
+
+      &.first-name,
+      &.last-name {
+        flex-basis: 200px;
+      }
+
+      &.date-of-birth,
+      &.start-date {
+        flex-basis: 150px;
+      }
+
+      &.street {
+        flex-basis: 70%;
+      }
+
+      &.city {
+        flex-basis: 180px;
+      }
+
+      &.zip-code {
+        flex-basis: 80px;
+      }
+    }
+
+    fieldset {
+      margin: 0;
+      border-radius: 10px;
+      border: 1px solid $color-text;
+      padding: 40px 25px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 50px;
+    }
+  }
+
+  @media screen and (max-width: $break-mobile) {
+    h2 {
+      padding: 15px 25px;
+    }
+
+    form {
+      padding: 75px 25px 25px 25px;
+    }
+
+    button {
+      margin: auto;
+    }
+  }
+}

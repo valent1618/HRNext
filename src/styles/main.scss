@@ -1,0 +1,22 @@
+/* - Utils - */
+@import './utils/variables';
+
+/* - Base - */
+@import './base/animations';
+@import './base/base';
+@import './base/typography';
+
+/* - Components - */
+@import '../components/Input/style';
+@import '../components/Select/style';
+@import '../components/Modal/style';
+
+/* - Layouts - */
+@import '../layouts/Navigation/style';
+@import '../layouts/Header/style';
+@import '../layouts/Footer/style';
+
+/* - Pages - */
+@import '../pages/style';
+@import '../pages/404/style';
+@import '../pages/list/style';

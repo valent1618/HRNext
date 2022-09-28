@@ -1,0 +1,87 @@
+#Navigation {
+  cursor: pointer;
+  position: fixed;
+  height: 100vh;
+  background: linear-gradient(0.25turn, rgba(white, 0.05), transparent);
+  display: flex;
+  justify-content: center;
+  transition: $transition;
+
+  &.hide {
+    display: none;
+  }
+
+  &.right {
+    right: 0;
+    background: linear-gradient(0.25turn, transparent, rgba(white, 0.1));
+
+    .create {
+      display: none;
+    }
+
+    &:hover {
+      background: linear-gradient(0.25turn, transparent, rgba(white, 0.15));
+    }
+  }
+
+  &.left {
+    left: 0;
+    background: linear-gradient(0.25turn, rgba(white, 0.1), transparent);
+
+    .list {
+      display: none;
+    }
+
+    &:hover {
+      background: linear-gradient(0.25turn, rgba(white, 0.15), transparent);
+    }
+  }
+
+  a {
+    height: 100%;
+    min-width: 10vw;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    div {
+      width: 50px;
+      height: 50px;
+      border: 2px solid $color-text;
+      border-radius: 50%;
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      filter: drop-shadow(0 0 3px $color-text);
+      transition: $transition;
+
+      svg {
+        fill: $color-text;
+      }
+    }
+  }
+
+  &:hover {
+    div {
+      filter: drop-shadow(0 0 7px $color-text);
+    }
+  }
+
+  @media screen and (max-width: $break-tablet) {
+    height: auto;
+    top: 50px;
+
+    &.right,
+    &.right:hover,
+    &.left,
+    &.left:hover {
+      background: none;
+
+      a {
+        width: calc(50vw - 100px);
+      }
+    }
+  }
+}

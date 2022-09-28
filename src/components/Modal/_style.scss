@@ -1,0 +1,55 @@
+.modal {
+  position: relative;
+  overflow: visible;
+  border-radius: $radius;
+  border: 2px solid $color-text;
+  box-shadow: $shadow;
+  background: $color-bg; /* fallback for old browsers */
+  background-image: $color-gradient; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-size: 400%;
+  animation: bg 20s ease-in-out infinite alternate-reverse;
+  padding: 25px 50px;
+  color: $color-text;
+  text-align: center;
+
+  .close {
+    position: absolute;
+    top: -1em;
+    right: -1em;
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+    padding: 0;
+
+    svg {
+      fill: $color-text;
+      filter: drop-shadow(0 0 2px $color-text);
+    }
+  }
+
+  h3 {
+    margin: 15px 0;
+    font-size: 1.5em;
+  }
+
+  .actions-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+
+    a,
+    button {
+      margin-top: 15px;
+    }
+
+    a {
+      color: $color-primary;
+    }
+  }
+
+  &::backdrop {
+    background: rgba(black, 0.25);
+  }
+}

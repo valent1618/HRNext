@@ -1,0 +1,25 @@
+#Header {
+  position: relative;
+  margin: 15px 0;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .logo {
+    opacity: 0.25;
+    animation: rotate 10s linear infinite;
+  }
+
+  h1 {
+    z-index: 5;
+    font-weight: 600;
+    margin: 0;
+    font-size: 60px;
+
+    span {
+      color: $color-primary;
+    }
+  }
+}

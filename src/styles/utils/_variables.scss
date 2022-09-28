@@ -1,0 +1,19 @@
+/* - Colors - */
+$color-primary: #c8f0a1;
+$color-text: white;
+$color-glass: #ebebeb;
+$color-bg: #3d7eaa;
+$color-gradient: linear-gradient(135deg, #f6bd60, $color-bg);
+
+/* - Shadow - */
+$shadow: 0 0 10px rgba(black, 0.1);
+
+/* - Radius - */
+$radius: 25px;
+
+/* - Transitions - */
+$transition: 0.2s;
+
+/* - Breakpoints - */
+$break-tablet: 770px;
+$break-mobile: 500px;

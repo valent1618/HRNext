@@ -1,0 +1,16 @@
+#List {
+  .table-layout {
+    height: calc(100vh - 300px);
+
+    tbody {
+      tr:not(.no-data) {
+        cursor: url('/assets/trash-cursor.png'), auto;
+        transition: $transition;
+
+        &:hover {
+          background-color: rgba($color-primary, 0.2);
+        }
+      }
+    }
+  }
+}
