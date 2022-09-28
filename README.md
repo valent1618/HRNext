@@ -1,34 +1,86 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# HRNext
+
+## Description
+
+HRNext is an internal web application of the fake society WealthHealth which allows you to manage employee.
+
+Coded with NextJs, and store data in Redux.
+Test with Jest.
+
+### Demo
+
+<https://valent1618.github.io/HRNet/>
 
 ## Getting Started
 
-First, run the development server:
+### Dependencies
 
-```bash
-npm run dev
-# or
-yarn dev
+**dependencies**
+
+- @reduxjs/toolkit: ^1.8.5
+- next: 12.3.1
+- plaid-components: ^1.1.2
+- react: 18.2.0
+- react-dom: 18.2.0
+- react-redux: ^8.0.4
+- sass: ^1.55.0
+
+**devDependencies**
+
+- @testing-library/jest-dom: ^5.16.5
+- @testing-library/react: ^13.4.0
+- @types/node: 18.7.23
+- @types/react: 18.0.21
+- @types/react-dom: 18.0.6
+- eslint: 8.24.0
+- eslint-config-next: 12.3.1
+- jest: ^29.1.1
+- jest-environment-jsdom: ^29.1.1
+- typescript: 4.8.3
+
+You need **NodeJs and PNPM**
+
+This app uses plaid-components, you can find more information on : <https://www.npmjs.com/package/plaid-components>
+
+### Installing
+
+1. **Clone this repo** with the command
+
+```
+git clone https://github.com/valent1618/HRNext.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. **Install** all the dependencies with **PNPM**
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+```
+pnpm install
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## RUN
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+In the project directory, you can run:
 
-## Learn More
+### `pnpm dev`
 
-To learn more about Next.js, take a look at the following resources:
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### `pnpm run build`
 
-## Deploy on Vercel
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### `pnpm run start`
+
+Runs the app in the production mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+### `pnpm test`
+
+Launches the test runner in the interactive watch mode.\
