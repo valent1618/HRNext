@@ -1,11 +1,10 @@
-import '@testing-library/jest-dom';
 import { fireEvent, screen } from '@testing-library/react';
 import render from '../../setupTests';
-import Modal from '.';
-import { closeModal } from '../../utils/handleModal';
+import Modal from '../../src/components/Modal';
+import { closeModal } from '../../src/utils/handleModal';
 
 // Mock handleModal because jest don't support 'close()' function
-jest.mock('../../utils/handleModal');
+jest.mock('../../src/utils/handleModal');
 
 const mockFn1 = jest.fn(() => 1);
 const mockFn2 = jest.fn(() => 2);

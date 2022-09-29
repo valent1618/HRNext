@@ -1,9 +1,8 @@
-import '@testing-library/jest-dom';
 import { screen } from '@testing-library/react';
 import render from '../../setupTests';
-import Select from '.';
+import Select from '../../src/components/Select';
 
-const setup = (label) => {
+const setup = (label?: string) => {
   render(
     <Select
       name='test'

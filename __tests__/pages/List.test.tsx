@@ -1,10 +1,10 @@
-import '@testing-library/jest-dom';
 import { screen } from '@testing-library/react';
 import render from '../../setupTests';
-import { payloadTest } from '../../redux/slices/employees.test';
-import List from '.';
+import { payloadTest } from '../redux/employees.test';
+import List from '../../src/pages/list';
+import { Employee } from '../../src/utils/interfaces';
 
-const setup = (state) => render(<List />, state && [state]);
+const setup = (state?: Employee) => render(<List />, state && [state]);
 
 describe('List page', () => {
   it('Should have title display', () => {

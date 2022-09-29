@@ -1,7 +1,6 @@
-import '@testing-library/jest-dom';
 import { screen, fireEvent } from '@testing-library/react';
 import render from '../../setupTests';
-import Input from '.';
+import Input from '../../src/components/Input';
 
 const setup = () =>
   render(

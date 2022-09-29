@@ -1,7 +1,6 @@
-import '@testing-library/jest-dom';
 import { screen } from '@testing-library/react';
 import render from '../../setupTests';
-import Footer from '.';
+import Footer from '../../src/layouts/Footer';
 
 describe('Footer', () => {
   it('Should have "Copyright" into the text', () => {

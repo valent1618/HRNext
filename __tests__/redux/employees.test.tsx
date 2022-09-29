@@ -1,5 +1,5 @@
-import { add, remove } from './employees';
-import reducer from './employees';
+import { add, remove } from '../../src/redux/slices/employees';
+import reducer from '../../src/redux/slices/employees';
 
 export const payloadTest = {
   firstName: 'Valentin',
@@ -27,12 +27,14 @@ export const payloadTest2 = {
 
 describe('Employees actions', () => {
   it('Should create a add action object', () => {
-    expect(add()).toEqual({
+    expect(add(payloadTest)).toEqual({
+      payload: payloadTest,
       type: 'employees/add',
     });
   });
   it('Should create a remove action object', () => {
-    expect(remove()).toEqual({
+    expect(remove(1)).toEqual({
+      payload: 1,
       type: 'employees/remove',
     });
   });

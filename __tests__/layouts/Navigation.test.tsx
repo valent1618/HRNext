@@ -1,11 +1,10 @@
-import '@testing-library/jest-dom';
 import { screen } from '@testing-library/react';
 import render from '../../setupTests';
-import Navigation from '.';
+import Navigation from '../../src/layouts/Navigation';
 
 const useRouter = jest.spyOn(require('next/router'), 'useRouter');
 
-const setup = (path) => {
+const setup = (path?: string) => {
   useRouter.mockImplementationOnce(() => ({
     pathname: path,
   }));

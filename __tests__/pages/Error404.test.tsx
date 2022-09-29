@@ -1,9 +1,8 @@
-import '@testing-library/jest-dom';
 import { screen } from '@testing-library/react';
 import render from '../../setupTests';
-import Error404 from '.';
+import Custom404 from '../../src/pages/404';
 
-const setup = () => render(<Error404 />);
+const setup = () => render(<Custom404 />);
 
 describe('Error404 page', () => {
   setup();

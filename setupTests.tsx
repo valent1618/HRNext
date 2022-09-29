@@ -1,18 +1,19 @@
+import { ReactNode } from 'react';
 import { render as rtlRender } from '@testing-library/react';
 import { Provider } from 'react-redux';
-import { configureStore, createSlice } from '@reduxjs/toolkit';
-import employeesReducer from './redux/slices/employees';
+import { configureStore, createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { Employee } from './src/utils/interfaces';
 
-function render(ui, initialState = []) {
+function render(ui: JSX.Element, initialState: Employee[] = []) {
   const { reducer } = createSlice({
     name: 'employees',
     initialState: initialState,
     reducers: {
-      add: (state, action) => {
+      add: (state, action: PayloadAction<Employee>) => {
         state.push(action.payload);
         return;
       },
-      remove: (state, action) => {
+      remove: (state, action: PayloadAction<number>) => {
         state.splice(action.payload, 1);
         return;
       },
@@ -25,7 +26,7 @@ function render(ui, initialState = []) {
     },
   });
 
-  function Wrapper({ children }) {
+  function Wrapper({ children }: { children: ReactNode }) {
     return <Provider store={store}>{children}</Provider>;
   }
 

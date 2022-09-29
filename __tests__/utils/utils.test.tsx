@@ -1,8 +1,8 @@
-import capitalizeFirstLetter from './capitalizeFirstLetter';
-import { payloadTest, payloadTest2 } from '../redux/slices/employees.test';
-import findEmployee from './findEmployee';
-import formatZipCode from './formatZipCode';
-import getObjKey from './getObjKey';
+import capitalizeFirstLetter from '../../src/utils/capitalizeFirstLetter';
+import { payloadTest, payloadTest2 } from '../redux/employees.test';
+import findEmployee from '../../src/utils/findEmployee';
+import formatZipCode from '../../src/utils/formatZipCode';
+import getObjKey from '../../src/utils/getObjKey';
 
 describe('Utils functions', () => {
   it('Should capitalize the first letter of each word in a string', () => {

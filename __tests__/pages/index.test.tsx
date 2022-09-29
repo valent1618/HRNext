@@ -1,10 +1,9 @@
-import '@testing-library/jest-dom';
 import { screen, fireEvent } from '@testing-library/react';
-import render from '../setupTests';
-import Create from '.';
-import { createEmployee } from '../redux/slices/employees';
+import render from '../../setupTests';
+import Create from '../../src/pages';
+import { createEmployee } from '../../src/redux/slices/employees';
 
-jest.mock('../redux/slices/employees');
+jest.mock('../../src/redux/slices/employees');
 
 const setup = () => render(<Create />);
 
